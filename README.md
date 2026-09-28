@@ -33,7 +33,7 @@ When a visitor presses the front door button, the **ESP32-CAM** detects the inpu
 | :--- | :--- | :--- | :--- |
 | 1 | Microcontroller | ESP32-CAM | 1 |
 | 2 | Audio Amplifier | MAX98357A I2S | 1 |
-| 3 | Push Button | SPST / Momentary | 1 |
+| 3 | Push Button | Momentary Push Button | 1 |
 | 4 | Speaker | 8Ω Outdoor Speaker | 1 |
 | 5 | Buzzer | Active Buzzer Module | 1 |
 | 6 | Charging Module | TP4056 | 1 |
@@ -56,7 +56,7 @@ The ESP32 fetches and streams the raw PCM buffers (`voice_doorbell`, `voice_swit
 
 ### System Power & Push Button Wiring
 - **TP4056 Charging Module**: Connect `IN+` terminal to **5V** of ESP32-CAM and `IN-` to **GND**.
-- **Doorbell Push Button**: Connect one terminal of the SPST switch to **GPIO 13** of ESP32-CAM and the other terminal to **GND**.
+- **Doorbell Push Button**: Connect one terminal of the Momentary push button to **GPIO 13** of ESP32-CAM and the other terminal to **GND**.
 - **Decoupling Capacitors**: Place one `100uF` electrolytic capacitor between **5V** and **GND**, and another `100uF` electrolytic capacitor between **3V3** and **GND** of the ESP32-CAM.
 
 ### Active Buzzer Wiring
